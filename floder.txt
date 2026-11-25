@@ -1,0 +1,76 @@
+RTL_AI_STUDIO/
+├── README.md
+├── requirements.txt
+├── floder.txt
+├── backend/
+│   ├── API/
+│   │   ├── __init__.py
+│   │   ├── routes/
+│   │   ├── app.py
+│   │   └── schemas/
+│   ├── ML/
+│   │   ├── core/
+│   │   ├── encoders/
+│   │   ├── features/
+│   │   ├── training/
+│   │   ├── inference/
+│   │   ├── optimization/
+│   │   ├── checkpoints/
+│   │   ├── datasets/
+│   │   └── reports/
+│   ├── assets/
+│   ├── css/
+│   └── js/
+├── frontend/
+├── constraints/
+│   ├── clocks/
+│   ├── timing/
+│   ├── io/
+│   └── config/
+├── design/
+│   ├── filelist/
+│   ├── rtl/
+│   ├── tb/
+│   └── generated/
+├── netlist/
+│   ├── raw/
+│   ├── json/
+│   ├── verilog/
+│   ├── graphs/
+│   ├── img/
+│   └── reports/
+├── scripts/
+│   └── python/
+│       ├── parsers/
+│       ├── synthesis/
+│       ├── simulation/
+│       ├── analysis/
+│       └── utils/
+├── waveform/
+│   ├── vcd/
+│   │   ├── raw/
+│   │   └── processed/
+│   └── vvp/
+├── data/
+│   ├── raw/
+│   │   ├── rtl/
+│   │   ├── vcd/
+│   │   └── netlist/
+│   ├── processed/
+│   │   ├── rtl/
+│   │   ├── vcd/
+│   │   └── graph/
+│   └── training/
+│       ├── samples/
+│       ├── labels/
+│       └── metadata/
+├── workspace/
+│   ├── designs/
+│   ├── candidates/
+│   ├── experiments/
+│   └── temporary/
+└── tests/
+    ├── parser/
+    ├── simulation/
+    ├── synthesis/
+    └── ML/

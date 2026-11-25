@@ -1,0 +1,30 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+
+# ML training products
+backend/ML/checkpoints/
+backend/ML/datasets/
+backend/ML/reports/
+data/
+workspace/
+
+# Generated EDA artifacts
+waveform/vcd/raw/
+waveform/vvp/
+netlist/raw/
+netlist/json/
+netlist/verilog/
+netlist/graphs/
+netlist/img/
+netlist/reports/
+
+# Private local command guide
+.run_workflow.md

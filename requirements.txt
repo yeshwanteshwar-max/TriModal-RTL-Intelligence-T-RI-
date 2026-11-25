@@ -1,0 +1,16 @@
+
+torch
+numpy
+networkx
+pyvcd
+transformers
+datasets
+scikit-learn
+pandas
+tqdm
+fastapi
+uvicorn
+python-multipart
+gymnasium
+pytest
+pyosys==0.71.post40
