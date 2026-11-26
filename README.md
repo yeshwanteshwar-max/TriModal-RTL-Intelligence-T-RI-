@@ -135,13 +135,13 @@ The lightweight RTL parser recognizes modules, ports, parameters, operators, seq
 
 ### VCD encoder
 
-The VCD parser maintains hierarchical scopes and Yosys-style signal identifiers. It supports scalar and vector values, binary values, `X`, and `Z` states. The temporal encoder is a GRU that processes configurable activity sequences while bounding memory usage.
+The bounded VCD parser maintains hierarchical scopes, signal aliases, widths, types, initial values, and timestamped scalar, vector, binary, real, `X`, and `Z` events. Feature extraction produces per-signal and circuit activity statistics plus a normalized 13-channel temporal sequence. The independent bidirectional GRU accepts padded variable-length batches and produces a normalized 128-dimensional waveform embedding. Optional behavior, activity, anomaly, and regression heads are separate from the encoder; they require labeled training data before predictions are meaningful.
 
 Raw toggle counts are interpreted as switching activity, not as real power consumption.
 
 ### Netlist graph encoder
 
-The Yosys JSON parser validates module and graph structure, creates nodes for ports, cells, and nets, and applies native PyTorch message passing. It preserves enough structural information to handle sequential and combinational designs and safely identifies unknown/custom cell types.
+The Yosys JSON parser validates module and graph structure and creates direction-aware connections between ports, cells, and nets. Typed 16-dimensional node features feed a native PyTorch GraphSAGE mean-neighbor encoder, which returns a 128-dimensional graph embedding without requiring PyTorch Geometric. Both encoders can be called independently and are not yet wired into the existing multimodal model.
 
 ### Multimodal fusion
 
